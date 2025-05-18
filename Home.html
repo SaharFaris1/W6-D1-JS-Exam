@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+        <nav class="navbar" style="background-color: rgb(229, 176, 92);">
+          <div class="container-fluid">
+            <a class="navbar-brand" style="color: rgb(0, 0, 0); font-weight: 600;">Home </a>
+            <div>
+              <button onclick="login()"  id="login-link" class="btn d-none" >
+                <a style="text-decoration: none; color: white;" href="login.html" >Login</a >
+              </button>
+              <button onclick="logout()" id="logout-link" class="d-none">
+                logOut
+              </button>
+            </div>
+          </div>
+        </nav>
+    
+    <section class="d-flex flex-column w-75 gap-2 m-auto " style=" display: flex; justify-content: center; text-align: center; height: 50vh; ">
+    </section>
+   
+        <section id="posts-container">
+    <div id="comments"></div>
+    
+        </section>
+        <script src="main.js"></script>
+        <script>
+          const u = localStorage.getItem("username");
+          if (u) {
+            document.getElementById("logout-link").className = "d-flex btn btn-outline-danger";
+          } else {
+            document.getElementById("login-link").className ="d-flex btn btn-secondary";
+          }
+          function logout() {
+            localStorage.removeItem("username");
+            window.location.reload();
+          }
+        </script>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="stylesheet" href="countries.css">
+</head>
+<body>
+    <section class="navbarsection" style="background-color: rgb(243, 175, 98); height: 60px; display: flex; justify-content: space-between;">
+
+        <nav class="navbar " style="display: flex; justify-content: space-between;">
+              <a class="navbar-brand" href="Home.html" style="color: rgb(0, 0, 0); font-weight: 600; color: #fff;">Home </a>
+              <a class="navbar-brand" href="countries.css" style="color: rgb(0, 0, 0); font-weight: 600; color: #fff;">Countries </a>
+              <a class="navbar-brand" href="login.html" style="color: rgb(0, 0, 0); font-weight: 600; color: #fff;">Login </a>
+             
+
+
+       <!-- <div>
+              
+                <button onclick="logout()" id="logout-link" class="d-none">
+                  logOut
+                </button>
+     </div>
+      --> 
+      
+          </nav>
+     
+    </section>
+    <section >
+    <div>
+
+    <h1 style="text-align: center;"> Your Naxt <span style="color:rgb(243, 175, 98) ;">Travel Destination </span> Is</h1>
+</section>
+    </div>
+<section>
+<div  id="container"  ></div>
+
+
+</section>
+
+    
+<script>
+    const u = localStorage.getItem("username");
+    if (u) {
+      document.getElementById("logout-link").className = "d-flex btn btn-outline-danger";
+    } else {
+      document.getElementById("login-link").className ="d-flex btn btn-secondary";
+    }
+    function logout() {
+      localStorage.removeItem("username");
+      window.location.reload();
+    }
+  </script>
+
+<script src="countries.js"></script>
+</body>
+</html>
